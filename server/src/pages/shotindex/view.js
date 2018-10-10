@@ -41,7 +41,7 @@ class Body extends React.Component {
       <reactruntime.BodyTemplate {...this.props}>
         <div className="column-space full-height" id="shot-index-page">
           <MyShotsHeader
-            hasDeviceId={this.props.hasDeviceId} hasFxa={this.props.hasFxa}
+            authenticated={this.props.authenticated} hasFxa={this.props.hasFxa}
             enableUserSettings={this.props.enableUserSettings} staticLink={this.props.staticLink} />
           { this.props.disableSearch ? null : this.renderSearchForm() }
           <div id="shot-index" className="flex-1">

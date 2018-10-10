@@ -31,7 +31,6 @@ exports.createModel = function(req) {
     isFxaAuthenticated,
     gaId: req.config.gaId,
     deviceId: req.deviceId,
-    authenticated: !!(req.deviceId || req.accountId),
     buildTime,
     simple: false,
     shotDomain: req.url, // FIXME: should be a property of the shot
@@ -62,7 +61,6 @@ exports.createModel = function(req) {
     gaId: req.config.gaId,
     deviceId: req.deviceId,
     shotAccountId: req.shot.accountId,
-    authenticated: !!(req.deviceId || req.accountId),
     shotDomain: req.url,
     urlIfDeleted: req.shot.urlIfDeleted,
     expireTime: req.shot.expireTime === null ? null : req.shot.expireTime.getTime(),
